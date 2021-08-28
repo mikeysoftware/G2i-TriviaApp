@@ -4,8 +4,8 @@
 - [x] Add/Configure ESLint and Prettier
 - [x] Configure Import Aliases - example "@components/Component";
 - [x] Add/Configure TailwindCSS
-- [ ] Add/Configure React Router Dom
+- [x] Add/Configure React Router DOM
+- [x] Add/Configure Redux (Toolkit) + Persisting
 - [ ] Add/Configure React-Testing-Library
 - [ ] Add/Configure StorybookJS Component Library Manager
-- [ ] Add/Configure Redux (Toolkit) + Persisting
 - [ ] ...
