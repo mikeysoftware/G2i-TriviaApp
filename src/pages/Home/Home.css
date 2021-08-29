@@ -1,0 +1,21 @@
+/* Home Page Styling */
+
+.home__wrapper {
+  @apply mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28;
+}
+
+.home__header {
+  @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl;
+}
+
+.home__subheader {
+  @apply mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl mx-auto;
+}
+
+.home__settings {
+  @apply mt-3 sm:mt-4 bg-gray-100 p-2 sm:p-4 rounded-lg;
+}
+
+.home__actions {
+  @apply mt-5 sm:mt-8 sm:flex justify-center;
+}

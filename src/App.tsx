@@ -8,7 +8,6 @@ import { store, persistor } from "store/store";
 // Pages
 import Home from "pages/Home";
 import Quiz from "pages/Quiz";
-import About from "pages/About";
 import Results from "pages/Results";
 import PageWrapper from "pages/PageWrapper";
 
@@ -27,9 +26,6 @@ function App(): JSX.Element {
               </Route>
               <Route exact path="/results">
                 <Results />
-              </Route>
-              <Route exact path="/about">
-                <About />
               </Route>
             </Switch>
           </PageWrapper>

@@ -1,0 +1,32 @@
+/* Modal Styling */
+.modal {
+  @apply fixed z-10 inset-0 overflow-y-auto;
+}
+
+.overlay__wrapper {
+  @apply flex min-h-screen text-center md:block md:px-2 lg:px-4;
+}
+
+.overlay__container {
+  @apply hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity md:block;
+}
+
+.modal__wrapper {
+  @apply flex text-base text-left transform transition w-full md:inline-block md:max-w-2xl md:px-4 md:my-8 md:align-middle lg:max-w-4xl;
+}
+
+.modal__container {
+  @apply w-full relative flex items-center bg-white rounded-md px-8 pt-14 pb-8 overflow-hidden shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8;
+}
+
+.content {
+  @apply w-full flex flex-col;
+}
+
+.content__title {
+  @apply text-2xl font-extrabold text-gray-900 sm:pr-12;
+}
+
+.content__subtitle {
+  @apply text-2xl text-gray-900;
+}

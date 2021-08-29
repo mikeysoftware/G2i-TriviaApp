@@ -1,0 +1,24 @@
+/* Banner Styling */
+.banner {
+  @apply bg-red-600 shadow-md rounded-md;
+}
+
+.banner__wrapper {
+  @apply max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8;
+}
+
+.banner__container {
+  @apply flex items-center justify-between flex-wrap;
+}
+
+.banner__message {
+  @apply w-full sm:w-0 justify-start flex-1 flex items-center;
+}
+
+.banner__cta {
+  @apply order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto;
+}
+
+.cta {
+  @apply flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-red-600 bg-white hover:bg-red-50;
+}

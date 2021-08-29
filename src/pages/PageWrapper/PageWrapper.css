@@ -3,5 +3,5 @@
   @apply max-w-7xl flex-grow w-full flex flex-col pt-4 mx-auto;
 }
 .page__container {
-  @apply relative flex-grow flex flex-col bg-white shadow-lg py-8 px-2 rounded-lg;
+  @apply relative flex-grow flex flex-col bg-white shadow-lg py-4 sm:py-8 px-2 rounded-lg;
 }

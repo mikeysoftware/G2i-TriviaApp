@@ -1,24 +1,18 @@
+import "./Banner.css";
 import { Link } from "react-router-dom";
-
 interface BannerProps {
   message?: string;
   buttonLabel?: string;
-  buttonCallback?: () => void;
+  buttonLink?: string;
 }
 
-export default function Banner({
-  message = "Banner Message",
-  buttonLabel = "Button Label",
-  buttonCallback = () => {
-    console.log(`${buttonLabel} Clicked!`);
-  },
-}: BannerProps): JSX.Element {
+export default function Banner({ message = "Banner Message", buttonLabel = "Button Label", buttonLink = "" }: BannerProps): JSX.Element {
   return (
-    <div className="bg-red-600 shadow-md rounded-md">
-      <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between flex-wrap">
+    <div className="banner">
+      <div className="banner__wrapper">
+        <div className="banner__container">
           {/* Message */}
-          <div className="w-full sm:w-0 justify-start flex-1 flex items-center">
+          <div className="banner__message">
             <Link to="/">
               <span className="flex p-2 rounded-lg bg-red-800">
                 {/* Think Icon */}
@@ -45,11 +39,8 @@ export default function Banner({
             </Link>
           </div>
           {/* Call to Action */}
-          <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-            <a
-              href=""
-              className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-red-600 bg-white hover:bg-red-50"
-              onClick={buttonCallback}>
+          <div className="banner__cta">
+            <a href={buttonLink} target="_blank" rel="noopener noreferrer" className="cta">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"

@@ -1,3 +1,4 @@
+import "./Home.css";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { Categories, Difficulties, QuestionTypes } from "utils/contants/QuizOptions";
@@ -67,14 +68,14 @@ export default function Home(): JSX.Element {
   }, [amount]);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+    <div className="home__wrapper">
       {/* Hero Content */}
       <div className="text-center">
         <GLogo className="mx-auto max-h-64 mb-2" />
-        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+        <h1 className="home__header">
           <span className="block">Welcome to the</span> <span className="block text-red-600">Trivia Challenge!</span>
         </h1>
-        <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl mx-auto">
+        <p className="home__subheader">
           This trivia application was made possible by the generous people over at{" "}
           <a className="underline text-blue-500 visited:text-blue-600" href="https://www.pixeltailgames.com/">
             PixelTail Games LLC
@@ -86,7 +87,7 @@ export default function Home(): JSX.Element {
           for the challenge and opportunity.
         </p>
 
-        <div className="mt-3 sm:mt-4 w bg-gray-100 p-2 sm:p-4 rounded-lg">
+        <div className="home__settings">
           <ul className=" sm:text-lg text-gray-800 font-medium">
             <li>
               Questions: <span className=" font-bold uppercase">{questionAmount}</span>{" "}
@@ -103,7 +104,7 @@ export default function Home(): JSX.Element {
           </ul>
         </div>
 
-        <div className="mt-5 sm:mt-8 sm:flex justify-center">
+        <div className="home__actions">
           <div className="rounded-md shadow">
             <button onClick={startQuiz} className="btn">
               Start Quiz
@@ -128,7 +129,7 @@ export default function Home(): JSX.Element {
           <form>
             {/* Amount */}
             <div className="mt-6">
-              <label htmlFor="question-amount" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="question-amount" className="label">
                 Amount of Questions
               </label>
               <input
@@ -139,13 +140,13 @@ export default function Home(): JSX.Element {
                 id="question-amount"
                 value={amount}
                 onChange={handleAmountChange}
-                className="mt-1 h-11 px-4 border focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-lg border-gray-300 rounded-md"
+                className="input"
               />
             </div>
 
             {/* Category */}
             <div className="mt-6">
-              <label htmlFor="question-amount" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="question-amount" className="label">
                 Category
               </label>
               <FormSelect options={Categories} value={category} onChangeHandler={setQuizCategory} />

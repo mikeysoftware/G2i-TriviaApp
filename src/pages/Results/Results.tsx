@@ -1,3 +1,4 @@
+import "./Results.css";
 import { useEffect } from "react";
 import { useHistory } from "react-router";
 
@@ -39,23 +40,23 @@ export default function Results(): JSX.Element {
   }, []);
 
   return (
-    <div className="sm:mt-10 mx-auto max-w-7xl px-4  sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+    <div className="results__wrapper">
       {/* Hero Content */}
       <div className="text-center">
-        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+        <h1 className="score">
           <span className="block">Final Score</span>{" "}
           <span className="block text-red-600">{`${calculateScore()} / ${questions.length}`}</span>
         </h1>
-        <ol className="px-4 py-4 list-decimal text-left mt-3 text-base text-gray-700 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl mx-auto">
+        <ol className="question__list">
           {questions.map((question) => (
             <li key={question?.question} className="my-4">
               <p>{question?.question}</p>
               {answerSheet[question?.question] === question?.correctAnswer ? (
-                <span className="font-bold text-green-700">{question?.correctAnswer}</span>
+                <span className="answer--correct">{question?.correctAnswer}</span>
               ) : (
                 <div>
-                  <span className="line-through font-bold text-red-500">{answerSheet[question?.question]}</span>
-                  <span className="font-bold text-green-700 ml-2">{question?.correctAnswer}</span>
+                  <span className="answer--incorrect">{answerSheet[question?.question]}</span>
+                  <span className="answer--correct ml-2">{question?.correctAnswer}</span>
                 </div>
               )}
             </li>

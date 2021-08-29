@@ -1,3 +1,4 @@
+import "./MultipleChoice.css";
 import { RadioGroup } from "@headlessui/react";
 
 interface MultipleChoiceProps {
@@ -14,7 +15,7 @@ export default function FormMultipleChoice({
   },
 }: MultipleChoiceProps): JSX.Element {
   return (
-    <div className="w-full py-10">
+    <div className="w-full py-6 sm:py-10">
       <div className="w-full">
         <RadioGroup value={selected} onChange={onSelectHandler}>
           <RadioGroup.Label className="sr-only">Answer options</RadioGroup.Label>
@@ -24,17 +25,17 @@ export default function FormMultipleChoice({
                 key={answer}
                 value={answer}
                 className={({ active, checked }) =>
-                  `${active ? "ring-2 ring-offset-2 ring-offset-white ring-red-500" : ""}
-                  ${checked ? "bg-red-600 text-red-600" : "bg-cool-200"}
-                    relative drop-shadow-lg rounded-3xl px-4 py-3 sm:px-5 sm:py-4 cursor-pointer flex focus:outline-none`
+                  `${active ? "choice--active" : ""}
+                  ${checked ? "choice--checked" : "bg-cool-200"}
+                    choice`
                 }>
                 {({ checked }) => (
                   <>
-                    <div className="flex items-center justify-start w-full">
-                      <div className="flex-shrink-0 mr-4 text-red">
+                    <div className="radio__wrapper">
+                      <div className="radio__container">
                         <div
                           className={` ${checked ? "border-red-600" : ""}
-                            w-6 h-6 bg-gray-50 border border-gray-400 rounded-full flex items-center justify-center`}>
+                            radio`}>
                           {checked && <div className="w-4 h-4 bg-red-700 rounded-full" />}
                         </div>
                       </div>

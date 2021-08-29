@@ -1,0 +1,60 @@
+/* Quiz Page Styling */
+.quiz__wrapper {
+  @apply mx-auto flex-grow w-full flex flex-col max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.quiz__container {
+  @apply mx-auto w-full flex-grow flex flex-col justify-center max-w-lg;
+}
+
+.quiz__page {
+  @apply sm:text-lg text-center font-bold text-red-600;
+}
+
+.quiz__question {
+  @apply text-2xl md:text-4xl tracking-tight font-extrabold text-gray-800;
+}
+
+/* Question Tabs */
+.tabs__container {
+  @apply hidden flex-shrink md:mb-4 md:grid md:gap-2 lg:gap-4;
+}
+
+.tab {
+  @apply h-2 md:h-3 rounded-md bg-gray-200;
+}
+
+.tab--active {
+  @apply ring-2 ring-offset-2 ring-offset-white ring-orange-400;
+}
+
+.tab--answered {
+  @apply bg-red-600;
+}
+
+/* Quiz Info */
+.helper {
+  @apply mb-6 sm:mb-0 flex items-center justify-between md:text-lg;
+}
+
+.helper__link {
+  @apply flex items-center text-gray-600 font-semibold;
+}
+
+.helper__category {
+  @apply text-red-600 font-semibold;
+}
+
+/* Boolean */
+.boolean {
+  @apply mt-5 mb-7 sm:mt-8 sm:flex justify-center;
+}
+
+/* Error */
+.quiz__error {
+  @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl;
+}
+
+.quiz__error--message {
+  @apply mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-2xl mx-auto;
+}
