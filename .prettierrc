@@ -7,5 +7,6 @@
   "semicolons": true,
   "tabWidth": 2,
   "tabs": true,
-  "semi": true
+  "semi": true,
+  "printWidth": 140
 }

@@ -6,6 +6,12 @@
 - [x] Add/Configure TailwindCSS
 - [x] Add/Configure React Router DOM
 - [x] Add/Configure Redux (Toolkit) + Persisting
+- [ ] Clean up styles/classname for Components and Pages
+- [ ] Add/Setup Unit Tests for Dry Functions
 - [ ] Add/Configure React-Testing-Library
-- [ ] Add/Configure StorybookJS Component Library Manager
+- [x] Make UI Reponsive for Mobile, Tablet, Desktop
+- [x] Logic for Customizing Quiz - Settings
+- [x] Logic for Traversing and Answering Questions
+- [x] Logic for Grading and Reporting Answers
+- [x] Excape encoded HTML Entities from API
 - [ ] ...

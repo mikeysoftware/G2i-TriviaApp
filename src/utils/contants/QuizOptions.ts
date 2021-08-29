@@ -1,21 +1,21 @@
 export const Categories = [
-    { "General Knowledge": 9 },
-    { "Movies": 11 },
-    { "Music": 12 },
-    { "Science": 17 },
-    { "Sports": 21 },
-    { "History": 23 },
-    { "Animals": 27 }
+    { label: "General Knowledge", value: 9 },
+    { label: "Movies", value: 11 },
+    { label: "Music", value: 12 },
+    { label: "Science", value: 17 },
+    { label: "Sports", value: 21 },
+    { label: "History", value: 23 },
+    { label: "Animals", value: 27 }
 ];
 
 export const Difficulties = [
-    "Easy",
-    "Medium",
-    "Hard"
+    { label: "Easy", value: "easy" },
+    { label: "Medium", value: "medium" },
+    { label: "Hard", value: "hard" },
 ];
 
 export const QuestionTypes = [
-    "Multiple Choice",
-    "True/False",
+    { label: "Multiple Choice", value: "multiple" },
+    { label: "True/False", value: "boolean" },
 ];
 
