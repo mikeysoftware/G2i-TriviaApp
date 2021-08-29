@@ -6,7 +6,7 @@
 - [x] Add/Configure TailwindCSS
 - [x] Add/Configure React Router DOM
 - [x] Add/Configure Redux (Toolkit) + Persisting
-- [ ] Clean up styles/classname for Components and Pages
+- [x] Apply BEM to Stylsheets for Components and Pages
 - [ ] Add/Setup Unit Tests for Dry Functions
 - [ ] Add/Configure React-Testing-Library
 - [x] Make UI Reponsive for Mobile, Tablet, Desktop
