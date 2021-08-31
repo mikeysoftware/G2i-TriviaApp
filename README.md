@@ -1,10 +1,27 @@
 # G2i React Web Code Challenge - Trivia App
 
+## Demo
+
+[Trivia Challenge - Demo Link](https://g2i-trivia-challenge.netlify.app/)
+
 ## Project Architecture
+
+```bash
+├── src
+│   ├── assets - Static assets used in the UI.
+│   ├── components - Configurable and Re-usable React Components.
+│   ├── hooks - Custom React Hooks for re-usability and consistency.
+│   ├── pages - React Components representing 'pages' in the application.
+│   ├── services - API requests structured as defined async promises.
+│   ├── store - Redux Slices (store sub-components) and store configuration (Redux-Toolkit).
+│   ├── utils - Common Helper and Utility functions.
+│   ├── App.ts - Application Entry Point.
+│   ├── index.ts - React Application Virtual DOM Mounting Element.
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts
 
 In the project directory, you can run:
 
