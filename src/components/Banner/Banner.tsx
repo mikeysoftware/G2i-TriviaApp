@@ -40,7 +40,7 @@ export default function Banner({ message = "Banner Message", buttonLabel = "Butt
           </div>
           {/* Call to Action */}
           <div className="banner__cta">
-            <a href={buttonLink} target="_blank" rel="noopener noreferrer" className="cta">
+            <a data-testid="portfolio_link" href={buttonLink} target="_blank" rel="noopener noreferrer" className="cta">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"

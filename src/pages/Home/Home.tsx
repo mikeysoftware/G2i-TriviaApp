@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
   }, [amount]);
 
   return (
-    <div className="home__wrapper">
+    <div data-testid="home_page" className="home__wrapper">
       {/* Hero Content */}
       <div className="text-center">
         <GLogo className="mx-auto max-h-64 mb-2" />

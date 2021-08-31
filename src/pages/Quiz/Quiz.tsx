@@ -53,6 +53,7 @@ export default function Quiz(): JSX.Element {
   // Shuffles and decodes the answers for each quesiton
   function shuffleAnswers(answers: string[]) {
     const decodedAnswers = answers.map((answer) => decodeEntity(answer));
+    console.log(decodedAnswers);
     let randomIndex;
     let currentIndex = decodedAnswers.length;
     while (currentIndex != 0) {
@@ -60,7 +61,7 @@ export default function Quiz(): JSX.Element {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
       // And swap it with the current element.
-      [answers[currentIndex], answers[randomIndex]] = [answers[randomIndex], answers[currentIndex]];
+      [decodedAnswers[currentIndex], decodedAnswers[randomIndex]] = [decodedAnswers[randomIndex], decodedAnswers[currentIndex]];
     }
 
     return answers;
@@ -248,6 +249,24 @@ export default function Quiz(): JSX.Element {
           )}
         </div>
       )}
+
+      {/* Loading Layout */}
+      {loading === true && (
+        <div className="loader__container">
+          <svg
+            className="animate-spin -ml-1 mr-3 h-1/2 w-1/2 text-red-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <h3 className="loader__message">Loading Questions</h3>
+        </div>
+      )}
       {/* Error Layout */}
       {error === true && (
         <div className="text-center">
@@ -268,7 +287,8 @@ export default function Quiz(): JSX.Element {
             <span className="block">Error!</span> <span className="block text-red-600">Something went wrong!</span>
           </h1>
           <p className="quiz__error--message">
-            There may have been an error with the amount questions you requested for this category. Lower the amount and try again.
+            There may have been an error with the quiz settings you requested for this trivia challenge. Try changing the settings and try.
+            again.
           </p>
         </div>
       )}

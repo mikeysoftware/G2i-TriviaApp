@@ -15,6 +15,15 @@
   @apply text-2xl md:text-4xl tracking-tight font-extrabold text-gray-800;
 }
 
+/* Loader */
+.loader__container {
+  @apply mx-auto w-full flex-grow flex flex-col justify-center items-center max-w-lg;
+}
+
+.loader__message {
+  @apply text-xl sm:text-3xl font-medium uppercase;
+}
+
 /* Question Tabs */
 .tabs__container {
   @apply hidden flex-shrink md:mb-4 md:grid md:gap-2 lg:gap-4;

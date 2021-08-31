@@ -7,8 +7,8 @@
 - [x] Add/Configure React Router DOM
 - [x] Add/Configure Redux (Toolkit) + Persisting
 - [x] Apply BEM to Stylsheets for Components and Pages
-- [ ] Add/Setup Unit Tests for Dry Functions
-- [ ] Add/Configure React-Testing-Library
+- [x] Add/Setup Unit Tests for Dry Functions / Components
+- [x] Add/Configure React-Testing-Library
 - [x] Make UI Reponsive for Mobile, Tablet, Desktop
 - [x] Logic for Customizing Quiz - Settings
 - [x] Logic for Traversing and Answering Questions

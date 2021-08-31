@@ -48,7 +48,7 @@ export default function Modal({
             leave="ease-in duration-200"
             leaveFrom="opacity-100 translate-y-0 md:scale-100"
             leaveTo="opacity-0 translate-y-4 md:translate-y-0 md:scale-95">
-            <div className="modal__wrapper">
+            <div data-testid="modal_container" className="modal__wrapper">
               <div className="modal__container">
                 <button
                   type="button"
